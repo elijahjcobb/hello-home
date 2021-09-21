@@ -33,16 +33,17 @@ import {KBBot, KBResponse, KBMessage, KBConversation} from "@elijahjcobb/keybase
 		usage: "!pic",
 		handler: async (msg: KBMessage, res: KBResponse): Promise<void> => {
 			if (msg.getUsername() !== "elijahcobb") await res.send("Sorry! You are not authorized. Message @elijahcobb for authorization.");
-			const myCamera = new PiCamera({
-				mode: "photo",
-				output: `${ __dirname }/snap.jpg`,
-				width: 640,
-				height: 480,
-				nopreview: true,
-			});
-
-			const path = await myCamera.snap();
-			await res.sendFile(path);
+			// const myCamera = new PiCamera({
+			// 	mode: "photo",
+			// 	output: `${ __dirname }/snap.jpg`,
+			// 	width: 640,
+			// 	height: 480,
+			// 	nopreview: true,
+			// });
+			//
+			// const path = await myCamera.snap();
+			// await res.sendFile(path);
+			await res.send("HI ELIJAH!");
 		}
 	});
 
